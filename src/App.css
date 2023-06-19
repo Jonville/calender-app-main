@@ -1,0 +1,67 @@
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;  /* 레이아웃 모드 */
+  justify-content: center;    /* 수평 (좌우) 가운데 정렬한다 */
+  align-items: center;      /* 위아래 가운데 정렬  */
+}
+
+* {
+  box-sizing: border-box; /* 지정한 크기를 유지 하는것 */
+}
+
+ul {
+  list-style-type: none;  /* <li> 에 점을 없애줌 */
+  padding: 0; /* 들여쓰기 되어있는걸 0으로 초기화 시켜줌 */
+}
+
+.calendar {
+  background: black;
+  color: white;
+  width: 400px;
+  padding: 1rem;    /* 16px = 1rem */
+  padding-top: 2rem;
+}
+
+.calendar ul.date {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;    /* 7개열을 만들어줌 */
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;       /* 7개 행 추가*/
+}
+
+.calendar ul.date li{
+  border-bottom: 1px solid rgba(255,255,255,0.2); /* 4번째 꺼는 불투명도 */
+  padding: 0.5rem; /* 반칸 ( 8px ) */
+}
+
+.calendar header {
+  display: flex;    /* 수평 ( 일자 ) 로 만들어줌 */
+}
+
+.calendar header h2 {
+  font-size: 40px;
+  margin: 0;
+  line-height: 40px;
+  margin-right: 1rem;
+}
+
+.calendar ul.date .currentTime {
+  background: red;
+  border-radius: 10px;
+}
+
+.calendar ul.date .holiday0 {
+  color : red;
+}
+
+.calendar ul.date .holiday6 {
+  color : blue;
+}
+
+.calendar ul.date .today {
+  background: red;
+  border-radius: 10px;
+}
